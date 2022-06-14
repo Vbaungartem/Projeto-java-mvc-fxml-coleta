@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="735.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLImprimirRelatorioController">
+   <children>
+      <Label layoutX="288.0" layoutY="292.0" text="Relatório de Litragem e Repasses Totais por Motorista">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonGerarRelatorio" layoutX="456.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleButtonImprimir" prefHeight="55.0" prefWidth="141.0" text="Gerar Relatório" />
+   </children>
+</AnchorPane>

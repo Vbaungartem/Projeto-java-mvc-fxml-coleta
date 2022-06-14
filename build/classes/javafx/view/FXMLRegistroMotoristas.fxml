@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="735.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.controller.FXMLRegistroMotoristasController">
+   <children>
+      <SplitPane dividerPositions="0.5282631038026722" layoutX="84.0" layoutY="46.0" prefHeight="400.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewMotorista" layoutX="41.0" layoutY="55.0" prefHeight="398.0" prefWidth="282.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnMotoristaNome" prefWidth="138.0" text="Nome" />
+                      <TableColumn fx:id="tableColumnMotoristaCpf" prefWidth="163.0" text="CPF" />
+                        <TableColumn fx:id="tableColumnMotoristaPCaminhao" prefWidth="120.0" text="Placa Caminhão" />
+                        <TableColumn fx:id="tableColumnMotoristaSaldo" prefWidth="108.0" text="Saldo" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <GridPane layoutX="59.0" layoutY="222.0" prefHeight="201.0" prefWidth="360.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="157.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="CPF:" GridPane.rowIndex="1" />
+                        <Label text="Placa do Veículo:" GridPane.rowIndex="2" />
+                        <Label text="Saldo:" GridPane.rowIndex="3" />
+                        <Label prefHeight="17.0" prefWidth="59.0" text="Nome:" />
+                        <TextField fx:id="textFieldNome" GridPane.columnIndex="1" />
+                        <TextField fx:id="textFieldCpf" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="textFieldPlacaVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="textFieldSaldo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="buttonInserir" layoutX="195.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="34.0" prefWidth="90.0" text="Inserir" />
+                  <Button fx:id="buttonAlterar" layoutX="74.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="34.0" prefWidth="90.0" text="Alterar" />
+                  <Button fx:id="buttonDeletar" layoutX="314.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="34.0" prefWidth="90.0" text="Deletar" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
